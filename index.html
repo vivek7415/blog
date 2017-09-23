@@ -81,7 +81,7 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li onclick="document.getElementById('id02').style.display='block'"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li onclick="document.getElementById('id01').style.display='block'"><a><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 		</ul>
     </div>
@@ -145,7 +145,7 @@
 </div>
 </div>
 
-
+<!-------------------login-------------------->
 
 <div id="id01" class="modal" style="overflow:scroll">
   
@@ -184,6 +184,51 @@ window.onclick = function(event) {
     }
 }
 </script>
+
+
+<!------------------------------sign up ------------------------------->
+<div id="id02" class="modal" style="overflow:scroll">
+  
+  <form class="modal-content animate" action="/action_page.php" >
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="avatar.jpg" alt="Avatar" class="avatar" style="max-height:200px;max-width:200px">
+    </div>
+
+    <div class="container">
+      <label><b>Name</b></label>
+      <input class="textc" type="text" placeholder="Enter Name..." name="uname" required>
+	  <label><b>College Name</b></label>
+      <input class="textc" type="text" placeholder="Enter College Name..." name="uname" required>
+	  <label><b>E-Mail Id</b></label>
+      <input class="textc" type="text" placeholder="Enter E-Mail Id..." name="uname" required>
+
+      <label><b>Mobile No.</b></label>
+      <input class="textc" type="text" placeholder="Enter Mobile No...." name="psw" required>
+        
+      <button class="buttonc" type="submit">Sign Up</button>
+     <!-- <input type="checkbox" checked="checked"> Remember me-->
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      <!--<span class="psw">Forgot <a href="#">password?</a></span>-->
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
 
 <div class="col-1"></div>
 </div>
